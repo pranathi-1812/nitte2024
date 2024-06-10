@@ -1,0 +1,216 @@
+11)Operators - Splitting into the teams
+#include <stdio.h>
+
+int main() {
+    int num_friends, num_teams;
+    
+    
+    scanf("%d %d", &num_friends, &num_teams);
+    
+    int friends_per_team = num_friends / num_teams;
+   
+    int left_out = num_friends % num_teams;
+    
+    // Print the results
+    printf("The number of friends in each team is %d and left out is %d\n", friends_per_team, left_out);
+    
+    return 0;
+}
+
+
+12)Dept Repay
+#include<stdio.h>
+int main() {
+    int num;
+    scanf("%d",&num);
+    if(num<0){
+        num=-num;
+    }
+    int first=num/1000;
+    int last=num % 10;
+    int sum=first+last;
+    printf("%d",sum);
+   
+    return 0;
+}
+
+13)Operators - 3 Psychos
+#include <stdio.h>
+
+int main() {
+    int x1, y1, x2, y2;
+    float mid_x, mid_y;
+    
+    
+    scanf("%d %d %d %d", &x1, &y1, &x2, &y2);
+    
+   
+    mid_x = (x1 + x2) / 2.0;
+    mid_y = (y1 + y2) / 2.0;
+    
+ 
+    printf("Arun's house is located at(%.1f,%.1f)\n", mid_x, mid_y);
+    
+    return 0;
+}
+
+14)Operators - Hop n Hop
+#include<stdio.h>
+ int main() {
+    int x, y;
+    int rabbit_x = 3, rabbit_y = 4;
+    
+
+    scanf("%d %d", &x, &y);
+    
+
+    int hops = abs(x - rabbit_x);
+    if (abs(y - rabbit_y) > hops)
+        hops = abs(y - rabbit_y);
+        printf("%d\n", hops);
+    
+    return 0;
+}
+
+15)Operators - Dollars & Cents
+#include<stdio.h>
+int main() {
+    int dollar1, cent1, dollar2, cent2;
+
+   
+    scanf("%d%d%d%d", &dollar1, &cent1, &dollar2, &cent2);
+
+
+    int totalCents = (dollar1 * 100 + cent1) + (dollar2 * 100 + cent2);
+
+
+    int dollars = totalCents / 100;
+    int cents = totalCents % 100;
+
+   
+    printf("%d\n%d\n", dollars, cents);
+
+    return 0;
+}
+
+16)Operators - Treasure Hunter
+#include<stdio.h>
+int main() {
+    int goldCoins, benSharePercentage, blackbeardSharePercentage;
+
+   
+    scanf("%d%d%d", &goldCoins, &benSharePercentage, &blackbeardSharePercentage);
+
+   
+    int benShare = (goldCoins * benSharePercentage) / 100;
+
+  
+    int remainingGoldCoins = goldCoins - benShare;
+    int blackbeardShare = (remainingGoldCoins * blackbeardSharePercentage) / 100;
+
+    remainingGoldCoins -= blackbeardShare;
+
+
+    int otherPiratesShare = remainingGoldCoins / 3;
+
+    
+    printf("%d\n%d\n%d\n", benShare, blackbeardShare, otherPiratesShare);
+
+    return 0;
+}
+
+
+17)Reverse a 3 Digit Number
+#include<stdio.h>
+int main() {
+    int number, reversed;
+
+
+    scanf("%d", &number);
+
+
+    reversed = (number % 10) * 100 + ((number / 10) % 10) * 10 + (number / 100);
+
+   
+    printf("%d\n", reversed);
+
+    return 0;
+}
+
+18)Operators - Tic Tac To
+#include<stdio.h>
+int main() {
+    int n;
+
+    
+    scanf("%d", &n);
+    int row = (n - 1) / 3;
+    int col = (n - 1) % 3;
+
+  
+    printf("%d %d\n", row, col);
+
+    return 0;
+}
+
+
+19)Decision Making - Checking Alphabets
+#include<stdio.h>
+#include <ctype.h>
+
+int main() {
+    char ch;
+
+  
+    scanf("%c", &ch);
+
+    
+    ch = tolower(ch);
+
+  
+    if (isalpha(ch)) {
+       
+        if (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u')
+            printf("Vowel\n");
+        else
+            printf("Consonant\n");
+    } else {
+        printf("Not an alphabet\n");
+    }
+
+    return 0;
+}
+
+
+20)Elecrticity Bill
+#include<stdio.h>
+int main() {
+    int units;
+    float bill;
+
+ 
+    scanf("%d", &units);
+
+  
+    if (units <= 200) {
+        bill = units * 0.5;
+    } else if (units <= 400) {
+        bill = (units * 0.65) + 100;
+    } else if (units <= 600) {
+        bill = (units * 0.8) + 200;
+    } else {
+        bill = (units * 1.25) + 425;
+    }
+
+
+    printf("Rs.%.0f\n", bill);
+
+    return 0;
+}
+
+
+
+
+
+
+
